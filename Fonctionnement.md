@@ -36,10 +36,12 @@ Solutions techniques
 - Le `serveur 1` est connecté par socket, grâce à `Nodejs`, au `serveur 2`
 - Lorsqu'un commentaire est laissé sur le `serveur 1`, il envoi en temps réel via le socket le nouveau commentaire sur le `serveur 2` qui va l'enregistrer définivement et va transmettre, via socket toujours, celui-ci aux serveurs connectés à lui.
 
-**Question :** est-ce que les commentaires sont enregistrés sur le `serveur 1` ou sont juste récupérés à titre temporaire comme ci-dessus ?
+**Problème :** est-ce que les commentaires sont enregistrés sur le `serveur 1` ou sont juste récupérés à titre temporaire comme ci-dessus ?
 
-Ça peut-être très intéressant car comme tous les serveurs sont interconnectés via socket, ils sont tous des miroirs en temps réel.
+Ça peut-être très intéressant de tout stocker sur chaquer instance car comme tous les serveurs sont interconnectés via socket, ils sont tous des miroirs en temps réel.
 Si un serveur vient de se créer, il récupère tous les débats et les commentaires via l'API puis se connecte en temps réel.
+
+Note : le calcul de la pertinence des commentaires est le travail de chaque serveur. Lorsqu'un client est déjà connecté, c'est à lui, en cas de nouveau commentaire, de calculer la position de la nouvelle interaction.
 
 Licence
 -------
