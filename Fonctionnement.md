@@ -33,7 +33,7 @@ Solutions techniques
 - Il a aussi une liste d'autres instances de `UDebate` pour proposer plus de débats à ses visiteurs
 - Une fois toutes les `n` minutes les débats sont récupérés sur les autres serveurs
 - Au chargement d'un débat provenant du `serveur 2` sur un `serveur 1` par un client, les commentaires sont chargés sur au client par le serveur via l'API du `serveur 2`.
-- Le `serveur 1` est connecté par socket au `serveur 2`
+- Le `serveur 1` est connecté par socket, grâce à `Nodejs`, au `serveur 2`
 - Lorsqu'un commentaire est laissé sur le `serveur 1`, il envoi en temps réel via le socket le nouveau commentaire sur le `serveur 2` qui va l'enregistrer définivement et va transmettre, via socket toujours, celui-ci aux serveurs connectés à lui.
 
 **Question :** est-ce que les commentaires sont enregistrés sur le `serveur 1` ou sont juste récupérés à titre temporaire comme ci-dessus ?
