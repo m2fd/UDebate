@@ -44,7 +44,7 @@ Si un serveur vient de se créer, il récupère tous les débats et les commenta
 Note : le calcul de la pertinence des commentaires est le travail de chaque serveur. Lorsqu'un client est déjà connecté, c'est à lui, en cas de nouveau commentaire, de calculer la position de la nouvelle interaction.
 
 ### Deuxième solution technique
-Je crée un serveur `S1`, je lui indique deux autres instances de `UDebate` que je connais. `S1` va alors récupérer les sujets actifs (recherche possible) sur ces serveurs, et de même, ces serveurs vont récupérer les sujets actifs de `S1`. Si un client poste un commentaire sur un `S1` alors `S1` prévient ses serveurs connus (dans sa liste) qu'il y'a eu un nouveau commentaire, eux-mêmes se mettent à jour et eux-mêmes préviennent les serveurs connus dans leur liste.
+Je crée un serveur `S1`, je lui indique deux autres instances de `UDebate` que je connais. `S1` va alors récupérer les sujets actifs (pas les commentaires) sur ces serveurs. Si un client poste un commentaire sur un `S1` alors `S1` prévient ses serveurs connus (dans sa liste) qu'il y'a eu un nouveau commentaire, eux-mêmes se mettent à jour et eux-mêmes préviennent les serveurs connus dans leur liste.
 
 
 Licence
