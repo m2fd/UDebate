@@ -27,7 +27,7 @@ Une interface digne de ce nom est à réfléchir. C'est le coeur même du site, 
 Solutions techniques
 --------------------
 
-### Décentralisation
+### Première solution technique (obsolète)
 
 - Chaque serveur a ses débats et ses commentaires
 - Il a aussi une liste d'autres instances de `UDebate` pour proposer plus de débats à ses visiteurs
@@ -45,6 +45,8 @@ Note : le calcul de la pertinence des commentaires est le travail de chaque serv
 
 ### Deuxième solution technique
 Je crée un serveur `S1`, je lui indique deux autres instances de `UDebate` que je connais. `S1` va alors récupérer les sujets actifs (pas les commentaires) sur ces serveurs. Si un client poste un commentaire sur un `S1` alors `S1` prévient ses serveurs connus (dans sa liste) qu'il y'a eu un nouveau commentaire, eux-mêmes se mettent à jour et eux-mêmes préviennent les serveurs connus dans leur liste.
+
+PS : le langage de développement serait sans doute Python.
 
 
 Licence
